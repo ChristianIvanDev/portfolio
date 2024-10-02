@@ -20,6 +20,10 @@ nav a {
     color: #fff;
     margin: 0 1rem;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #d1c4e9;
 }
 .container {
     width: 80%;
@@ -31,11 +35,12 @@ nav a {
     background-color: #fff;
     border-radius: 15px;
     padding: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .profile:hover, .projects:hover, .teacher:hover, .interests:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .profile img {
     border-radius: 50%;
@@ -58,5 +63,17 @@ footer {
     .container {
         width: 100%;
         padding: 0 1rem;
+    }
+}
+
+/* Keyframes for smooth transitions */
+@keyframes hoverEffect {
+    from {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 }

@@ -1,18 +1,23 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #6a1b9a, #d1c4e9) no-repeat fixed;
+    background: url('path/to/your/image.jpg') no-repeat fixed center center / cover;
     color: #333;
-    animation: animate__fadeIn 1s ease-in-out;
+    text-align: center;
 }
+
 header {
     background-color: #6a1b9a;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     animation: animate__fadeInDown 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 nav {
     background-color: #8e24aa;
     padding: 1rem;
@@ -22,6 +27,7 @@ nav {
     gap: 1rem;
     animation: animate__fadeInUp 1s ease-in-out;
 }
+
 nav a {
     color: #fff;
     padding: 0.5rem 1rem;
@@ -29,10 +35,12 @@ nav a {
     transition: color 0.3s ease, transform 0.3s ease;
     border-radius: 5px;
 }
+
 nav a:hover {
     color: #d1c4e9;
     transform: scale(1.1);
 }
+
 .container {
     width: 80%;
     margin: auto;
@@ -40,19 +48,32 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
 }
+
 section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: animate__fadeInUp 1s ease-in-out;
 }
+
 section:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+h2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    animation: animate__bounceIn 1s ease-in-out;
+}
+
 footer {
     background-color: #6a1b9a;
     color: #fff;
@@ -60,25 +81,33 @@ footer {
     padding: 1rem 0;
     animation: animate__fadeInUp 1s ease-in-out;
 }
+
 @media (max-width: 768px) {
     .container {
         width: 100%;
         padding: 0 1rem;
     }
 }
+
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
 form label {
     margin-top: 1rem;
 }
+
 form input, form textarea {
     padding: 0.5rem;
     margin-top: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
 }
+
 form button {
     margin-top: 1rem;
     padding: 0.5rem;
@@ -89,6 +118,22 @@ form button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 form button:hover {
     background-color: #6a1b9a;
+}
+
+.profile-img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.profile-img-header {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
 }

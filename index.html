@@ -6,26 +6,33 @@
     <title>Mi Portafolio Profesional</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 </head>
 <body>
-    <header>
+    <header class="animate__animated animate__fadeInDown">
         <h1>Mi Portafolio Profesional</h1>
     </header>
-    <nav>
+    <nav class="animate__animated animate__fadeInUp">
         <a href="designer.html">Diseñador</a>
         <a href="developer.html">Desarrollador</a>
         <a href="teacher.html">Maestro</a>
         <a href="interests.html">Gustos Personales</a>
     </nav>
     <div class="container">
-        <section>
+        <section class="animate__animated animate__fadeIn">
             <h2>Bienvenido a mi portafolio</h2>
             <p>Explora mis roles y habilidades a través de las diferentes secciones.</p>
         </section>
     </div>
-    <footer>
+    <footer class="animate__animated animate__fadeInUp">
         <p>&copy; 2024 Mi Portafolio Profesional</p>
         <p><a href="https://github.com/ChristianIvanDev" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/christianieg/" target="_blank">LinkedIn</a></p>
     </footer>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("nav a"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 </body>
 </html>

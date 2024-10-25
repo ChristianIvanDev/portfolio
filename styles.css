@@ -1,69 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #6a1b9a, #d1c4e9) no-repeat fixed; /* Gradient from dark purple to pale purple */
+    background: linear-gradient(to bottom, #6a1b9a, #d1c4e9) no-repeat fixed;
     color: #333;
-    animation: fadeIn 1s ease-in-out;
+    animation: animate__fadeIn 1s ease-in-out;
 }
 header {
     background-color: #6a1b9a;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    animation: slideInDown 1s ease-in-out;
+    animation: animate__fadeInDown 1s ease-in-out;
 }
 nav {
     background-color: #8e24aa;
     padding: 1rem;
     text-align: center;
-    animation: slideInUp 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    animation: animate__fadeInUp 1s ease-in-out;
 }
 nav a {
     color: #fff;
-    margin: 0 1rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
 }
 nav a:hover {
     color: #d1c4e9;
+    transform: scale(1.1);
 }
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
-.profile, .projects, .teacher, .interests {
-    margin: 2rem 0;
+section {
     background-color: #fff;
     border-radius: 15px;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: animate__fadeInUp 1s ease-in-out;
 }
-.profile:hover, .projects:hover, .teacher:hover, .interests:hover {
+section:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    animation: pulse 1s infinite;
-}
-.profile img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-}
-.profile h1, .projects h2, .teacher h2, .interests h2 {
-    margin: 0.5rem 0;
-}
-.profile p, .projects p, .teacher p, .interests p {
-    color: #333;
 }
 footer {
     background-color: #6a1b9a;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    animation: slideInUp 1s ease-in-out;
+    animation: animate__fadeInUp 1s ease-in-out;
 }
 @media (max-width: 768px) {
     .container {
@@ -71,54 +66,29 @@ footer {
         padding: 0 1rem;
     }
 }
-
-/* Keyframes for smooth transitions */
-@keyframes hoverEffect {
-    from {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    to {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+form {
+    display: flex;
+    flex-direction: column;
 }
-
-/* Custom animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+form label {
+    margin-top: 1rem;
 }
-
-@keyframes slideInDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
-@keyframes slideInUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #8e24aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+form button:hover {
+    background-color: #6a1b9a;
 }
